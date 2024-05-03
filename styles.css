@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Background color of space */
+    overflow: hidden; /* Hide overflow content */
+}
+
+
+.logo-left {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    max-width: 200px; /* Adjust the size of the logos */
+}
+
+.logo-right {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    max-width: 200px; /* Adjust the size of the logos */
+}
+
+.logo-center {
+    position: center;
+    margin-top: 20px;
+    max-width: 300px; /* Adjust the size of the logos */
+}
+
+.container {
+    max-width: 600px;
+    margin: 60px auto;
+    text-align: center;
+    position: relative; /* Added to position the timer */
+}
+
+img {
+    max-width: 300px; /* Adjust the size of the logo */
+    margin: 0 auto; /* Center the logo horizontally */
+    display: block; /* Ensure it's treated as a block element */
+}
+
+#timer {
+    font-family: "Audiowide", sans-serif;
+    font-size: 95px;
+    margin-top: 70px;
+    position: absolute;
+    padding: 10px 20px; /* Adjust padding to your liking */
+    border: 2px solid transparent; /* Initial border */
+    border-radius: 10px; /* Rounded corners */
+    top: 20%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    color: #ffffff; /* White color */
+    animation: glowBorder 2s infinite alternate;
+}
+
+#timer.end-of-hackathon {
+    font-size: 48px; /* Adjust font size for "End of Hackathon" */
+}
+
+@keyframes glowBorder {
+    0% {
+        border-color: #00FFFF; /* Initial border color */
+        box-shadow: 0 0 10px #00FFFF; /* Initial shadow color and size */
+    }
+    100% {
+        border-color: #008080; /* Final border color */
+        box-shadow: 0 0 20px #008080; /* Final shadow color and size */
+    }
+}
+
+.blink {
+    animation: blinkAnimation 1s infinite;
+}
+
+@keyframes blinkAnimation {
+    from {
+        opacity: 1; /* Visible */
+    }
+    to {
+        opacity: 0; /* Invisible */
+    }
+
+}
+
+
